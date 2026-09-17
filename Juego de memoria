@@ -115,7 +115,7 @@
             background: #ff8c00;
         }
 
-        /* Pantalla inicial */
+       
         #start-screen {
             position: fixed;
             inset: 0;
@@ -166,7 +166,6 @@
 
 <body>
 
-<!-- Pantalla de inicio -->
 <div id="start-screen">
 
     <h1>🏀 Memoria de Básquet 🏀</h1>
@@ -243,7 +242,7 @@ let lives = 5;
 let pairs = 0;
 
 
-// Mezclar
+
 function shuffle(array) {
 
     for (let i = array.length - 1; i > 0; i--) {
@@ -258,7 +257,7 @@ function shuffle(array) {
 }
 
 
-// Crear tablero
+
 function createBoard() {
 
     board.innerHTML = "";
@@ -308,7 +307,7 @@ function createBoard() {
     });
 
 
-    // Mostrar todas las cartas
+
     const allCards =
         document.querySelectorAll(".card");
 
@@ -317,7 +316,7 @@ function createBoard() {
     });
 
 
-    // Después de 1 segundo se dan vuelta
+  
     setTimeout(() => {
 
         allCards.forEach(card => {
@@ -338,7 +337,7 @@ function createBoard() {
 }
 
 
-// Dar vuelta una carta
+
 function flipCard(card) {
 
     if (lockBoard) return;
@@ -367,7 +366,7 @@ function flipCard(card) {
 }
 
 
-// Comprobar pareja
+
 function checkMatch() {
 
     const firstSymbol =
@@ -453,7 +452,7 @@ function checkMatch() {
 }
 
 
-// Detectar clic
+
 board.addEventListener("click", function(e) {
 
     const card =
@@ -466,7 +465,7 @@ board.addEventListener("click", function(e) {
 });
 
 
-// COMENZAR EL JUEGO
+
 startButton.addEventListener("click", function() {
 
     startScreen.style.display = "none";
@@ -476,7 +475,7 @@ startButton.addEventListener("click", function() {
 });
 
 
-// REINICIAR
+
 restart.addEventListener("click", function() {
 
     createBoard();
