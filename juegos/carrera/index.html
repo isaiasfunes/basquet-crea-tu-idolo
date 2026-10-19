@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE ROOKIE | Cargando tu carrera...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body { background: #08090d; color: #fff; font-family: "Press Start 2P", monospace; display: grid; place-items: center; min-height: 100vh; margin: 0; text-align: center; }
+        p { font-size: 12px; line-height: 2; }
+        span { color: #ff7518; }
+        a { color: #ff7518; font-size: 10px; }
+    </style>
+</head>
+<body>
+    <div>
+        <p>CARGANDO TU<br><span>CARRERA...</span></p>
+        <p><a href="/modocarrera/index.html">TOCÁ ACÁ SI NO AVANZA</a></p>
+    </div>
+    <script>
+        // Puente: el botón CONFIRMAR JUGADOR del proyecto original (crearjugador2.html,
+        // sin modificar) guarda el jugador en sessionStorage y cae acá.
+        // Reenviamos a la carrera en /modocarrera (mismo origen: el jugador viaja solo).
+        try {
+            var j = sessionStorage.getItem("jugador");
+            if (!j) {
+                var fallback = {
+                    nombre: sessionStorage.getItem("nombreJugador") || "ROOKIE",
+                    posicion: sessionStorage.getItem("posicionJugador") || "PG",
+                    tez: sessionStorage.getItem("tezJugador") || "#a96f48",
+                    cabello: sessionStorage.getItem("cabelloJugador") || "style1"
+                };
+                sessionStorage.setItem("jugador", JSON.stringify(fallback));
+            }
+        } catch (e) {}
+        window.location.replace("/modocarrera/index.html");
+    </script>
+</body>
+</html>

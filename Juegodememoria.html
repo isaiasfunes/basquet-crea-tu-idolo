@@ -10,8 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/mini-fit.css">
-    <script src="js/mini-fit.js"></script>
 
     <style>
 
@@ -1189,7 +1187,7 @@
                 /* GANÓ */
 
                 if (pairs === 8) {
-                    if (window.rookieSumar) rookieSumar("memoria", true);
+
                     lockBoard = true;
 
                     message.textContent =
@@ -1233,7 +1231,7 @@
                     /* GAME OVER */
 
                     if (lives <= 0) {
-                        if (window.rookieSumar) rookieSumar("memoria", false);
+
                         lockBoard = true;
 
                         message.textContent =

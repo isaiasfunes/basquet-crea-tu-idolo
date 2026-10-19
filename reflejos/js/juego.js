@@ -94,7 +94,6 @@ function fallar() {
 }
 
 function terminarJuego(perdiste) {
-    if (window.rookieSumar) rookieSumar("reflejos", !perdiste, { aciertos: aciertos });
     jugando = false;
     clearInterval(intervalo);
     objetivo.style.display = "none";
